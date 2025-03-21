@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Aesthetic Hearts ❤️</title>
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #d6336c;
+            font-size: 24px;
+        }
+
+        button {
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #ff5f6d, #ff4b88);
+            transform: scale(1.05);
+        }
+
+        .heart-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin-top: 20px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Click to see a random heart ❤️</h2>
+        <button onclick="changeHeart()">Show New Heart</button>
+        <br>
+        <img id="heartImage" src="images/heart1.jpg" alt="Heart" class="heart-img">
+    </div>
+
+    <script>
+        // Array of heart images in the 'images' folder (more than 3 images now)
+        const heartImages = [
+            "images/heart1.jpg",  // Path to heart1.jpg
+            "images/heart2.jpg",  // Path to heart2.jpg
+            "images/heart3.jpg",  // Path to heart3.jpg
+            "images/heart4.jpg",  // Path to heart4.jpg
+            "images/heart5.jpg",  // Path to heart5.jpg
+            "images/heart6.jpg"   // Path to heart6.jpg
+        ];
+     
+        function changeHeart() {
+            let randomIndex = Math.floor(Math.random() * heartImages.length);
+            document.getElementById("heartImage").src = heartImages[randomIndex];
+        }
+     </script>     
+
+</body>
+</html>
